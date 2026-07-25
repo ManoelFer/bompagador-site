@@ -1,0 +1,221 @@
+:root {
+  --bg: #f7f9f8;
+  --surface: #ffffff;
+  --text: #1a201d;
+  --text-soft: #57635d;
+  --line: #e3e8e5;
+  --brand: #1f9d55;
+  --brand-strong: #157a41;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b0f0d;
+    --surface: #131a16;
+    --text: #e8efeb;
+    --text-soft: #9aa7a0;
+    --line: #223029;
+    --brand: #3ec877;
+    --brand-strong: #6fe29b;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.65;
+  font-size: 17px;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px 22px 80px;
+}
+
+header.site {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 22px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+}
+
+header.site .mark {
+  width: 40px;
+  height: 40px;
+  border-radius: 11px;
+  background: var(--brand);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 20px;
+  flex: none;
+}
+
+header.site .name {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+header.site .name small {
+  display: block;
+  font-weight: 400;
+  font-size: 13px;
+  color: var(--text-soft);
+}
+
+/* Language switch (PT / EN) */
+.lang-switch {
+  margin-left: auto;
+  display: flex;
+  gap: 4px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 3px;
+  flex: none;
+}
+
+.lang-switch button {
+  border: 0;
+  background: transparent;
+  color: var(--text-soft);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 5px 11px;
+  border-radius: 999px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.lang-switch button[aria-pressed="true"] {
+  background: var(--brand);
+  color: #fff;
+}
+
+/* i18n: only the active language is shown. The inline <head> script sets the
+   html.lang-* class before paint, so there is no flash of both languages. */
+[data-lang] {
+  display: none;
+}
+
+html.lang-pt [data-lang="pt"],
+html.lang-en [data-lang="en"] {
+  display: revert;
+}
+
+h1 {
+  font-size: 30px;
+  line-height: 1.2;
+  margin: 34px 0 6px;
+  letter-spacing: -0.02em;
+}
+
+.updated {
+  color: var(--text-soft);
+  font-size: 14px;
+  margin: 0 0 28px;
+}
+
+h2 {
+  font-size: 21px;
+  margin: 40px 0 10px;
+  letter-spacing: -0.01em;
+}
+
+p,
+ul {
+  margin: 0 0 16px;
+}
+
+ul {
+  padding-left: 22px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+a {
+  color: var(--brand-strong);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.lead {
+  font-size: 19px;
+  color: var(--text);
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 20px 22px;
+  margin: 22px 0;
+}
+
+.home-links {
+  list-style: none;
+  padding: 0;
+  margin: 30px 0;
+}
+
+.home-links li {
+  margin-bottom: 14px;
+}
+
+.home-links a {
+  display: block;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 18px 20px;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.home-links a:hover {
+  border-color: var(--brand);
+  text-decoration: none;
+}
+
+.home-links span {
+  display: block;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--text-soft);
+  margin-top: 3px;
+}
+
+footer.site {
+  margin-top: 60px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+  color: var(--text-soft);
+  font-size: 14px;
+}
+
+.back {
+  display: inline-block;
+  margin-bottom: 4px;
+  font-size: 15px;
+}

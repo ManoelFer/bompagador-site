@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title data-pt="Bom Pagador - Termos e Privacidade" data-en="Bom Pagador - Terms and Privacy">
+      Bom Pagador - Terms and Privacy
+    </title>
+    <meta name="description" content="Terms of Use and Privacy Policy for the Bom Pagador app." />
+    <script>
+      // Pick the language before paint: saved choice first, otherwise the browser
+      // language (Portuguese -> pt, anything else -> en). Avoids a flash of both.
+      (function () {
+        try {
+          var saved = localStorage.getItem("bp-lang");
+          var lang =
+            saved === "pt" || saved === "en"
+              ? saved
+              : (navigator.language || "en").toLowerCase().indexOf("pt") === 0
+                ? "pt"
+                : "en";
+          document.documentElement.className = "lang-" + lang;
+        } catch (e) {
+          document.documentElement.className = "lang-en";
+        }
+      })();
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="site">
+        <div class="mark">B</div>
+        <div class="name">
+          Bom Pagador
+          <small>
+            <span data-lang="pt">Organize e lembre das suas contas</span>
+            <span data-lang="en">Organize and remember your bills</span>
+          </small>
+        </div>
+        <div class="lang-switch" role="group" aria-label="Language / Idioma">
+          <button type="button" data-set-lang="pt">PT</button>
+          <button type="button" data-set-lang="en">EN</button>
+        </div>
+      </header>
+
+      <div data-lang="pt">
+        <h1>Termos e Privacidade</h1>
+        <p class="lead">
+          Aqui você encontra os documentos oficiais do Bom Pagador. Eles explicam as regras de uso do
+          aplicativo e o que acontece com os seus dados (spoiler: eles ficam no seu celular).
+        </p>
+        <ul class="home-links">
+          <li>
+            <a href="privacidade.html">
+              Política de Privacidade
+              <span>O que o app guarda, onde fica e por que a gente não coleta seus dados.</span>
+            </a>
+          </li>
+          <li>
+            <a href="termos.html">
+              Termos de Uso
+              <span>As regras para usar o aplicativo e o que esperar dele.</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div data-lang="en">
+        <h1>Terms and Privacy</h1>
+        <p class="lead">
+          Here you will find the official Bom Pagador documents. They explain the rules for using the
+          app and what happens to your data (spoiler: it stays on your phone).
+        </p>
+        <ul class="home-links">
+          <li>
+            <a href="privacidade.html">
+              Privacy Policy
+              <span>What the app stores, where it lives, and why we do not collect your data.</span>
+            </a>
+          </li>
+          <li>
+            <a href="termos.html">
+              Terms of Use
+              <span>The rules for using the app and what to expect from it.</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <footer class="site">
+        <span data-lang="pt">Bom Pagador. Dúvidas? Fale com a gente em</span>
+        <span data-lang="en">Bom Pagador. Questions? Reach us at</span>
+        <a href="mailto:suporte.bompagador.mobile.app@gmail.com">suporte.bompagador.mobile.app@gmail.com</a>.
+      </footer>
+    </div>
+    <script src="i18n.js"></script>
+  </body>
+</html>
