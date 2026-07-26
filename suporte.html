@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title data-pt="Suporte - Bom Pagador" data-en="Support - Bom Pagador">Support - Bom Pagador</title>
+    <meta name="description" content="Support and help for the Bom Pagador app." />
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("bp-lang");
+          var lang =
+            saved === "pt" || saved === "en"
+              ? saved
+              : (navigator.language || "en").toLowerCase().indexOf("pt") === 0
+                ? "pt"
+                : "en";
+          document.documentElement.className = "lang-" + lang;
+        } catch (e) {
+          document.documentElement.className = "lang-en";
+        }
+      })();
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="site">
+        <div class="mark">B</div>
+        <div class="name">
+          Bom Pagador
+          <small>
+            <span data-lang="pt">Organize e lembre das suas contas</span>
+            <span data-lang="en">Organize and remember your bills</span>
+          </small>
+        </div>
+        <div class="lang-switch" role="group" aria-label="Language / Idioma">
+          <button type="button" data-set-lang="pt">PT</button>
+          <button type="button" data-set-lang="en">EN</button>
+        </div>
+      </header>
+
+      <a class="back" href="index.html">
+        <span data-lang="pt">Voltar</span>
+        <span data-lang="en">Back</span>
+      </a>
+
+      <!-- ============================ PORTUGUÊS ============================ -->
+      <div data-lang="pt">
+        <h1>Suporte</h1>
+        <p class="lead">
+          Deu algum problema, ficou com dúvida ou quer sugerir uma melhoria? Escreve pra gente. Tem
+          uma pessoa de verdade lendo do outro lado.
+        </p>
+
+        <div class="card">
+          <p style="margin: 0 0 6px"><strong>E-mail de contato</strong></p>
+          <p style="margin: 0 0 6px">
+            <a href="mailto:suporte.bompagador.mobile.app@gmail.com"
+              >suporte.bompagador.mobile.app@gmail.com</a
+            >
+          </p>
+          <p style="margin: 0; color: var(--text-soft); font-size: 15px">
+            Respondemos em português ou inglês, normalmente em até 2 dias úteis.
+          </p>
+        </div>
+
+        <h2>O que incluir na mensagem</h2>
+        <p>Quanto mais detalhe, mais rápido a gente resolve. Se puder, conte:</p>
+        <ul>
+          <li>Modelo do aparelho e versão do iOS (ex.: iPhone 13, iOS 26).</li>
+          <li>Versão do app (fica em Ajustes, na seção "Sobre o app").</li>
+          <li>O que você estava fazendo quando o problema aconteceu.</li>
+          <li>Print ou vídeo da tela, se der.</li>
+        </ul>
+
+        <h2>Perguntas frequentes</h2>
+
+        <h2 style="font-size: 18px">Onde ficam os meus dados?</h2>
+        <p>
+          Só no seu aparelho. O Bom Pagador funciona offline, não pede cadastro e não envia suas
+          contas, valores ou comprovantes para nenhum servidor. Os detalhes estão na
+          <a href="privacidade.html">Política de Privacidade</a>.
+        </p>
+
+        <h2 style="font-size: 18px">Não estou recebendo os lembretes</h2>
+        <p>Vale conferir, nesta ordem:</p>
+        <ul>
+          <li>
+            Nos Ajustes do iPhone, em Notificações, veja se o Bom Pagador está autorizado a mandar
+            avisos.
+          </li>
+          <li>
+            Dentro do app, em Ajustes, na seção Notificações, confira se os avisos estão ligados e
+            qual o horário e a antecedência escolhidos.
+          </li>
+          <li>Confirme se a conta ainda está pendente. Conta marcada como paga não avisa mais.</li>
+        </ul>
+
+        <h2 style="font-size: 18px">Vou trocar de celular. Como levo meus dados?</h2>
+        <p>
+          Em Ajustes, na seção Dados, abra Armazenamento e exporte um backup. No aparelho novo, abra
+          a mesma tela e importe o arquivo.
+        </p>
+
+        <h2 style="font-size: 18px">Como apago tudo?</h2>
+        <p>
+          Em Ajustes, na seção Dados, abra Armazenamento e use a opção de apagar os dados. Apagar o
+          aplicativo do iPhone também remove tudo, já que nada fica guardado fora dele. Nos dois
+          casos a exclusão é definitiva, então exporte um backup antes se quiser guardar o histórico.
+        </p>
+
+        <h2 style="font-size: 18px">Comprei o Apoiador e ele não apareceu</h2>
+        <p>
+          Abra a tela do Apoiador dentro do app e toque em "Restaurar compras", usando o mesmo Apple
+          ID da compra. Se ainda assim não liberar, nos escreva. Pedidos de reembolso são tratados
+          pela Apple, em
+          <a href="https://reportaproblem.apple.com" rel="noopener">reportaproblem.apple.com</a>.
+        </p>
+
+        <h2>Documentos</h2>
+        <ul>
+          <li><a href="privacidade.html">Política de Privacidade</a></li>
+          <li><a href="termos.html">Termos de Uso</a></li>
+        </ul>
+      </div>
+
+      <!-- ============================= ENGLISH ============================= -->
+      <div data-lang="en">
+        <h1>Support</h1>
+        <p class="lead">
+          Something went wrong, or you have a question or an idea? Write to us. There is a real
+          person reading on the other side.
+        </p>
+
+        <div class="card">
+          <p style="margin: 0 0 6px"><strong>Contact email</strong></p>
+          <p style="margin: 0 0 6px">
+            <a href="mailto:suporte.bompagador.mobile.app@gmail.com"
+              >suporte.bompagador.mobile.app@gmail.com</a
+            >
+          </p>
+          <p style="margin: 0; color: var(--text-soft); font-size: 15px">
+            We answer in English or Portuguese, usually within 2 business days.
+          </p>
+        </div>
+
+        <h2>What to include in your message</h2>
+        <p>The more detail, the faster we can help. If you can, tell us:</p>
+        <ul>
+          <li>Your device model and iOS version (e.g. iPhone 13, iOS 26).</li>
+          <li>The app version (in Settings, under "About").</li>
+          <li>What you were doing when the problem happened.</li>
+          <li>A screenshot or screen recording, if possible.</li>
+        </ul>
+
+        <h2>Frequently asked questions</h2>
+
+        <h2 style="font-size: 18px">Where is my data stored?</h2>
+        <p>
+          On your device only. Bom Pagador works offline, requires no account, and never sends your
+          bills, amounts or receipts to any server. The details are in the
+          <a href="privacidade.html">Privacy Policy</a>.
+        </p>
+
+        <h2 style="font-size: 18px">I am not getting reminders</h2>
+        <p>Check these, in order:</p>
+        <ul>
+          <li>In iPhone Settings, under Notifications, make sure Bom Pagador is allowed to notify you.</li>
+          <li>
+            Inside the app, in Settings, under Notifications, check that reminders are on and review
+            the time and how many days ahead they fire.
+          </li>
+          <li>Confirm the bill is still pending. A bill marked as paid no longer reminds you.</li>
+        </ul>
+
+        <h2 style="font-size: 18px">I am switching phones. How do I move my data?</h2>
+        <p>
+          In Settings, under Data, open Storage and export a backup. On the new device, open the same
+          screen and import the file.
+        </p>
+
+        <h2 style="font-size: 18px">How do I erase everything?</h2>
+        <p>
+          In Settings, under Data, open Storage and use the erase option. Deleting the app from your
+          iPhone also removes everything, since nothing is stored outside it. Both are permanent, so
+          export a backup first if you want to keep your history.
+        </p>
+
+        <h2 style="font-size: 18px">I bought Supporter and it did not unlock</h2>
+        <p>
+          Open the Supporter screen in the app and tap "Restore purchases", using the same Apple ID
+          you bought with. If it still does not unlock, write to us. Refunds are handled by Apple at
+          <a href="https://reportaproblem.apple.com" rel="noopener">reportaproblem.apple.com</a>.
+        </p>
+
+        <h2>Documents</h2>
+        <ul>
+          <li><a href="privacidade.html">Privacy Policy</a></li>
+          <li><a href="termos.html">Terms of Use</a></li>
+        </ul>
+      </div>
+
+      <footer class="site">
+        <span data-lang="pt">Bom Pagador. Dúvidas? Fale com a gente em</span>
+        <span data-lang="en">Bom Pagador. Questions? Reach us at</span>
+        <a href="mailto:suporte.bompagador.mobile.app@gmail.com">suporte.bompagador.mobile.app@gmail.com</a>.
+      </footer>
+    </div>
+    <script src="i18n.js"></script>
+  </body>
+</html>
